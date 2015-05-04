@@ -1,0 +1,9 @@
+<h1>{{ poll.question }}</h1>
+<ol><li><td>选项</td><td>投票数</td></li>
+	{% for choice in poll.choice_set.all %}
+		<li> 
+			<td>{{ choice.choice_text }}</td>
+			<td>{{ choice.votes }}</td>
+		</li>
+	{% endfor %}
+</ol>
